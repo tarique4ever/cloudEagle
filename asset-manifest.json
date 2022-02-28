@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cloudEagle/static/css/main.073c9b0a.css",
+    "main.js": "/cloudEagle/static/js/main.990392ed.js",
+    "static/js/787.404c43d8.chunk.js": "/cloudEagle/static/js/787.404c43d8.chunk.js",
+    "index.html": "/cloudEagle/index.html",
+    "main.073c9b0a.css.map": "/cloudEagle/static/css/main.073c9b0a.css.map",
+    "main.990392ed.js.map": "/cloudEagle/static/js/main.990392ed.js.map",
+    "787.404c43d8.chunk.js.map": "/cloudEagle/static/js/787.404c43d8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.990392ed.js"
+  ]
+}
