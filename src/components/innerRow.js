@@ -6,7 +6,6 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import EditIcon from "@mui/icons-material/Edit";
 import SaveIcon from "@mui/icons-material/Save";
-
 import { TextField } from "@mui/material";
 
 export default function InnerRow(props) {
@@ -33,7 +32,6 @@ export default function InnerRow(props) {
   );
 
 
-  console.log("test1", inner);
   const onEditApp = () => {
     if (editShow) {
       setEditShow(false);
@@ -53,7 +51,6 @@ export default function InnerRow(props) {
     setEditShow(true);
   };
 
-  console.log("test", appNameValue);
 
   return (
     <TableRow hover key={inner.applicationName}>

@@ -29,8 +29,8 @@ function descendingComparator(a, b, orderBy) {
 
 function getComparator(order, orderBy) {
   return order === "desc"
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
+    ? (a, b) => descendingComparator(a.item, b.item, orderBy)
+    : (a, b) => -descendingComparator(a.item, b.item, orderBy);
 }
 
 // This method is created for cross-browser compatibility, if you don't
@@ -66,11 +66,11 @@ function EnhancedTableHead(props) {
               color: "rgba(96, 96, 96)",
             },
           }}
-        />
+        /> 
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
-            align={headCell.numeric ? "center" :""}
+            align={headCell.numeric ? "center" : ""}
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{
@@ -111,10 +111,9 @@ EnhancedTableHead.propTypes = {
   rowCount: PropTypes.number.isRequired,
 };
 
-
 export default function VendorTable() {
   const [order, setOrder] = useState("asc");
-  const [orderBy, setOrderBy] = useState("name");
+  const [orderBy, setOrderBy] = useState("vendorName");
 
   let combineArr = [];
   vendor.map((item) => {
@@ -147,8 +146,8 @@ export default function VendorTable() {
           />
           <TableBody>
             {stableSort(combineArr, getComparator(order, orderBy)).map(
-              (application) => (
-                <AppTable key={application.item.vendorName} row={application} />
+              (application, index) => (
+                <AppTable key={index} row={application} />
               )
             )}
           </TableBody>
